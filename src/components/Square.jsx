@@ -1,5 +1,5 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 
 // Square component - each square of the game is button with 2 props X and O
@@ -11,10 +11,10 @@ function Square({value, onClick}) {
     )
 }
 
-// Square.PropTypes = {
-//     value: PropTypes.string,
-//     onClick: PropTypes.func
-// }
+Square.PropTypes = {
+    value: PropTypes.string,
+    onClick: PropTypes.func
+}
 
 
 export default Square;

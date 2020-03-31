@@ -1,5 +1,5 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 
 function Restart({onClick}) {
@@ -12,8 +12,8 @@ function Restart({onClick}) {
 
 }
 
-// Restart.PropTypes = {
-//     onClick: PropTypes.func
-// }
+Restart.PropTypes = {
+    onClick: PropTypes.func
+}
 
 export default Restart;
