@@ -30,5 +30,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0"
+  },
+  "description": "This is React app for Tic Tac Toe game made using React hooks. Npm install necessary if downloaded.",
+  "main": "index.js",
+  "author": "Ratko Pokrajac",
+  "license": "ISC"
 }
