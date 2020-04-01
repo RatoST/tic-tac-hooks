@@ -68,14 +68,10 @@ function Game(){
     const [countO, setCountO] = useState(0);
   
     function score() {
-      if (winner === "X") {
-        return () => {
-          setCountX(countX + 1);
-        };
-      } else if (winner === "O") {
-        return () => {
-          setCountO(countO + 1);
-        };
+      if (winner === "X"){ 
+        setCountX(countX + 1);
+        } else if (winner === "O") {
+         setCountO(countO + 1);        
       }
     }
 
@@ -102,8 +98,12 @@ function Game(){
                 </div>
                 <div className="game-info">{getStatus()}</div>
                 <div className="restart-button">{renRestartButt()}</div>
-                <div className="game-info">X score is {countX} </div>
-                <div className="game-info">O score is {countO} </div>
+                <div className="score">
+                    <span>X score is {countX}</span>
+                    <span> | </span>
+                    <span>O score is {countO}</span>
+                </div>
+                
             </div>
         </div>
     )
