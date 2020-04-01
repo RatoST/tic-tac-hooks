@@ -57,9 +57,26 @@ function Game(){
                 onClick={() => {
                     setSquares(Array(9).fill(null));
                     setIsNext(true);
+                    score(); //should add score to the leaderboard when clicked
                 }}
             />
         );
+    }
+
+    //Keeping score
+    const [countX, setCountX] = useState(0);
+    const [countO, setCountO] = useState(0);
+  
+    function score() {
+      if (winner === "X") {
+        return () => {
+          setCountX(countX + 1);
+        };
+      } else if (winner === "O") {
+        return () => {
+          setCountO(countO + 1);
+        };
+      }
     }
 
     return ( //return of Game function
@@ -85,6 +102,8 @@ function Game(){
                 </div>
                 <div className="game-info">{getStatus()}</div>
                 <div className="restart-button">{renRestartButt()}</div>
+                <div className="game-info">X score is {countX} </div>
+                <div className="game-info">O score is {countO} </div>
             </div>
         </div>
     )
