@@ -88,7 +88,6 @@ function Game(){
             </div>
         </div>
     )
-
 }
 
 //Calculate winner by all possible permutations

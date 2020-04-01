@@ -11,7 +11,7 @@ function Square({value, onClick}) {
     )
 }
 
-Square.PropTypes = {
+Square.propTypes = {
     value: PropTypes.string,
     onClick: PropTypes.func
 }

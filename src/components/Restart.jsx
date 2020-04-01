@@ -12,7 +12,7 @@ function Restart({onClick}) {
 
 }
 
-Restart.PropTypes = {
+Restart.propTypes = {
     onClick: PropTypes.func
 }
 
