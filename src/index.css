@@ -78,6 +78,11 @@ ol, ul {
   flex-direction: column;
 }
 
+.justify {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .game-info {
   font-size: 48px;
   color: #424242;
