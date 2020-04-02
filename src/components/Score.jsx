@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 
 function Score({score}){
     
-    const {name,countX, countO} = {score}
+    const {name,countX, countO} = score;
           
     return (
         <div>
-           {name}            
-           {countX}
-           {countO}
+           <span>   {name}  |</span>            
+           <span>   X = {countX}    |</span>
+           <span>   O = {countO}    |</span>           
         </div>
     )
 
