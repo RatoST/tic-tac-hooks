@@ -4,7 +4,7 @@ import Square from "./Square";
 import Restart from "./Restart";
 
 
-function Game(score){
+function Game(props){
 /*  State of initial array - 1st element is the variable we want to keep track and 2nd is a function that lets us 
     change the state of this variable and also notify React that the state of the component has changed 
     and it needs to be re-rendered */
@@ -16,6 +16,7 @@ function Game(score){
     //wrap calculate of winner into const 
     const winner = calculateWinner(squares);
 
+  
     //Game statur - winner or draw
     function getStatus() {
         if (winner) {
@@ -59,7 +60,8 @@ function Game(score){
                 onClick={() => {
                     setSquares(Array(9).fill(null));
                     setIsNext(true);
-                }}
+                    {props.score(winner)}
+                 }}
             />
         );
     }
@@ -128,7 +130,7 @@ function isBoardFull(squares) {
 }
 
 Game.propTypes = {
-    score: PropTypes.object
+    score: PropTypes.func
 }
 
 export default Game;

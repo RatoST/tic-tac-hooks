@@ -1,19 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Score(name,countX, countO){
+function Score({score}){
     
-    const {score} = [name,countX, countO]
+    const {name,countX, countO} = {score}
           
     return (
         <div>
-           {score}            
+           {name}            
+           {countX}
+           {countO}
         </div>
     )
 
 }
 
 Score.propTypes = {
+    score: PropTypes.func,
     name: PropTypes.string,
     countX: PropTypes.number,
     countO: PropTypes.number
