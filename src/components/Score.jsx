@@ -6,7 +6,7 @@ function Score({score}){
     const {name,countX, countO} = score;
           
     return (
-        <div>
+        <div className="score">
            <span>   {name}  |</span>            
            <span>   X = {countX}    |</span>
            <span>   O = {countO}    |</span>           
