@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Square from "./Square";
 import Restart from "./Restart";
 
-function Game(){
+
+function Game(score){
 /*  State of initial array - 1st element is the variable we want to keep track and 2nd is a function that lets us 
     change the state of this variable and also notify React that the state of the component has changed 
     and it needs to be re-rendered */
@@ -57,28 +59,11 @@ function Game(){
                 onClick={() => {
                     setSquares(Array(9).fill(null));
                     setIsNext(true);
-                    score(); //should add score to the leaderboard when clicked
                 }}
             />
         );
     }
-
-    //Keeping score
-    const [countX, setCountX] = useState(0);
-    const [countO, setCountO] = useState(0);
-  
-    function score() {
-      if (winner === "X") {
-        return () => {
-          setCountX(countX + 1);
-        };
-      } else if (winner === "O") {
-        return () => {
-          setCountO(countO + 1);
-        };
-      }
-    }
-
+    
     return ( //return of Game function
         // Game board
         <div className="container">
@@ -102,8 +87,6 @@ function Game(){
                 </div>
                 <div className="game-info">{getStatus()}</div>
                 <div className="restart-button">{renRestartButt()}</div>
-                <div className="game-info">X score is {countX} </div>
-                <div className="game-info">O score is {countO} </div>
             </div>
         </div>
     )
@@ -142,6 +125,10 @@ function isBoardFull(squares) {
         }
     }
     return true;
+}
+
+Game.propTypes = {
+    score: PropTypes.object
 }
 
 export default Game;
