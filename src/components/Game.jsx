@@ -26,7 +26,7 @@ function calculateWinner(squares) {
   }
   return null;
 }
-function Game(props) {
+function Game({ score }) {
 /*  State of initial array - 1st element is the variable we want to keep track and 2nd is a
     function that lets us change the state of this variable and also notify React that the
     state of the component has changed
@@ -93,7 +93,7 @@ function Game(props) {
         onClick={() => {
           setSquares(Array(9).fill(null));
           setIsNext(true);
-          props.score(winner);
+          score(winner);
         }}
       />
     );
